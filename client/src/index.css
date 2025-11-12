@@ -1,4 +1,4 @@
-html {
+ html {
     font-size: 14px;
     font-family: 'Rubik', sans-serif;
 
@@ -13,6 +13,7 @@ body {
     padding: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #ccc;
 }
 
 .card {
