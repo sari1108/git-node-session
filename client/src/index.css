@@ -1,0 +1,304 @@
+html {
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+body {
+    /* font-family: var(--font-family); */
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    background: var(--surface-ground);
+    color: var(--text-color);
+    padding: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+    background: var(--surface-card);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 0.8rem;
+
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: 0.5rem;
+}
+
+.p-tabmenu-nav {
+    display: flex;
+    gap: 0.5rem;
+    padding-inline: 0;
+}
+
+.p-tabmenu-nav .p-tabmenuitem {
+    margin-left: 0;
+}
+
+/* תפריט מותאם אישית */
+.custom-tabmenu .p-tabmenu-nav {
+    padding: 0.3rem 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.custom-tabmenu .p-tabmenu-nav .p-menuitem-link {
+    font-family: 'Alef', sans-serif;
+    position: relative;
+    background: transparent;
+    color: #ff66de;
+    border: none;
+    border-radius: 0;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.95rem;
+    overflow: hidden;
+}
+
+.custom-tabmenu .p-tabmenu-nav .p-menuitem-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(270deg, #ff00b3, #00fff7);
+    background-size: 600% 600%;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.custom-tabmenu .p-tabmenu-nav .p-menuitem-link:hover::after,
+.custom-tabmenu .p-tabmenu-nav .p-menuitem-link.p-highlight::after {
+    opacity: 1;
+    animation: gradientBar 2s linear infinite;
+}
+
+@keyframes gradientBar {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.logo-image {
+    height: 60px;
+    margin-left: 1rem;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 1rem;
+}
+.users-page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #f765a0, #ffe6f0, #00fff7);
+    background-size: 400% 400%;
+    animation: diagonalBackground 6s ease-in-out infinite;
+}
+
+.buttons-wrapper {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-button {
+    position: relative;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-button:hover {
+    transform: scale(1.05);
+}
+
+.image-button img {
+    display: block;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 2rem;
+    color: #880044;
+    font-weight: bold;
+    background:  #f7659f8d;
+    padding: 12px 0;
+}
+
+/*  */
+.image-buttonhome {
+    position: relative;
+    border: none;
+    background: rgba(202, 197, 197, 0.423);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-buttonhome:hover {
+    transform: scale(1.05);
+}
+
+.image-buttonhome img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.image-labelhome {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #880044;
+    font-weight: bold;
+    background:  #e0dadc8d;
+    padding: 8px 0;
+}
+
+
+@media (max-width: 768px) {
+    .custom-tabmenu .p-tabmenu-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-image {
+        margin-bottom: 0.5rem;
+    }
+
+    .custom-tabmenu {
+        width: 100%;
+    }
+
+    .p-tabmenuitem button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+.hometext{
+    align-items: center;
+    text-align: center;
+}
+.product{
+    min-height: 25vh;
+    margin:2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+@keyframes diagonalBackground {
+    0% {
+        background-position: top right;
+    }
+    50% {
+        background-position: bottom left;
+    }
+    100% {
+        background-position: top right;
+    }
+}
+.but{
+    display: flex;
+
+}
+.grid.grid-nogutter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: transparent;
+}
+.productpage {
+    min-height: 100vh;
+    /* background: linear-gradient(135deg, #f765a0, #ffe6f0, #00fff7); */
+    /* background-size: 100% 200%; */
+    /* animation: diagonalBackground 6s ease-in-out infinite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+.p-inputnumber-button-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-inputnumber-button-up,
+.p-inputnumber-button-down {
+    background-color: rgba(255, 255, 255, 0) ;
+    border: none ;
+    color: #00fff7 ;
+    border-radius: 0 ;
+    height: 1rem ;
+    padding: 0 ;
+}
+
+.p-inputnumber-button-up .pi,
+.p-inputnumber-button-down .pi {
+    font-size: 0.8rem ;
+    color: white ;
+}
+@keyframes diagonalBackground {
+  0% {
+    border-image-source: linear-gradient(135deg, #f765a0, #ffe6f0, #00fff7);
+    border-image-slice: 1;
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 100%;
+  }
+  100% {
+    border-image-source: linear-gradient(135deg, #f765a0, #ffe6f0, #00fff7);
+    border-image-slice: 1;
+    background-position: 100% 0;
+  }
+}
+
+.element {
+  border: 5px solid transparent; /* הגדרת גבול */
+  border-radius: 12px; /* אם אתה רוצה פינות מעוגלות */
+  background-size: 100% 200%;
+  animation: diagonalBackground 6s ease-in-out infinite; /* הוספת אנימציה */
+  -webkit-mask-image: linear-gradient(135deg, #f765a0, #ffe6f0, #00fff7);
+}
+

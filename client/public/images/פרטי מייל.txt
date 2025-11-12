@@ -1,0 +1,9 @@
+SmtpClient smtpClient = new SmtpClient("smtp.office365.com");
+smtpClient.Port = 587;
+smtpClient.EnableSsl = true;
+
+
+שם המשתמש:
+38000000000@mby.co.il
+(כאשר במקום 00000000 יש לרשום את מספר הזהות)
+והסיסמה: Student@264
